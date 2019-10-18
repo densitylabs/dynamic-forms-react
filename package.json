@@ -1,22 +1,27 @@
 {
-  "name": "dummy-react-npm-module",
+  "name": "dynamic-forms-react",
   "version": "1.0.0",
-  "description": "A dummy react npm module",
-  "main": "index.js",
+  "description": "A react package to use dynamic_forms gem",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/.bin/babel src --out-file index.js"
+    "build": "rm -rf dist && babel src/ --out-dir dist"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/recraftstudio/dummy-react-npm-module.git"
+    "url": "git+https://github.com/densitylabs/dynamic-forms-react.git"
   },
-  "author": "Manoj Singh Negi",
+  "author": "Yan Carlos Marin Osorio",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/recraftstudio/dummy-react-npm-module/issues"
+    "url": "https://github.com/densitylabs/dynamic-forms-react/issues"
   },
-  "homepage": "https://github.com/recraftstudio/dummy-react-npm-module#readme",
+  "homepage": "https://github.com/densitylabs/dynamic-forms-react#readme",
   "peerDependencies": {
     "react": "^16.6.1",
     "react-dom": "^16.6.3"
@@ -28,5 +33,11 @@
     "@babel/preset-react": "^7.0.0",
     "react": "^16.6.1",
     "react-dom": "^16.6.3"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "formik": "^1.5.8",
+    "reactstrap": "^8.0.1",
+    "yup": "^0.27.0"
   }
 }
