@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm install --save dynamic-forms-react
+yarn add https://github.com/densitylabs/dynamic-forms-react
 ```
 
 ## Usage
