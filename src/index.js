@@ -41,7 +41,7 @@ class DynamicForms extends Component {
 
   render() {
     return(
-      <div className="container">
+      <div>
         <Formik
           initialValues={initialValues}
           validationSchema={FormValidator}
@@ -62,7 +62,7 @@ class DynamicForms extends Component {
           }}
         >
           {({ values, errors, isSubmitting, touched, setFieldValue, setFieldTouched }) => (
-            <Form className="px-3 py-4">
+            <Form className="py-4">
               <Row>
                 <Col md={12}>
                   <FormGroup>

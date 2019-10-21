@@ -81,9 +81,7 @@ function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      return _react.default.createElement("div", {
-        className: "container"
-      }, _react.default.createElement(_formik.Formik, {
+      return _react.default.createElement("div", null, _react.default.createElement(_formik.Formik, {
         initialValues: initialValues,
         validationSchema: _form_validator.FormValidator,
         onSubmit: function onSubmit(values, _ref) {
@@ -109,7 +107,7 @@ function (_Component) {
             setFieldValue = _ref2.setFieldValue,
             setFieldTouched = _ref2.setFieldTouched;
         return _react.default.createElement(_formik.Form, {
-          className: "px-3 py-4"
+          className: "py-4"
         }, _react.default.createElement(_reactstrap.Row, null, _react.default.createElement(_reactstrap.Col, {
           md: 12
         }, _react.default.createElement(_reactstrap.FormGroup, null, _react.default.createElement(_reactstrap.Label, {
