@@ -15,12 +15,12 @@ yarn add https://github.com/densitylabs/dynamic-forms-react
 ```jsx
 import React, { Component } from 'react';
 
-import DynamicForms from 'dynamic-forms-react';
+import { ContactUsForm } from 'dynamic-forms-react';
 
 class Example extends Component {
   render () {
     return (
-      <DynamicForms 
+      <ContactUsForm 
         endPoint="your-dynamic-form-endpoint"
         onSuccess={{'title': 'Successful', 'body': 'Your data was sent successfully.'}}
         onError={{'title': 'Error', 'body': 'An error has ocurred.'}}
