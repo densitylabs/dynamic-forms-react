@@ -12,6 +12,7 @@ yarn add https://github.com/densitylabs/dynamic-forms-react
 
 ## Usage
 
+*Contact Us Form*
 ```jsx
 import React, { Component } from 'react';
 
@@ -20,7 +21,7 @@ import { ContactUsForm } from 'dynamic-forms-react';
 class Example extends Component {
   render () {
     return (
-      <ContactUsForm 
+      <ContactUsForm
         endPoint="your-dynamic-form-endpoint"
         onSuccess={{'title': 'Successful', 'body': 'Your data was sent successfully.'}}
         onError={{'title': 'Error', 'body': 'An error has ocurred.'}}
@@ -29,6 +30,58 @@ class Example extends Component {
   }
 }
 ```
+
+*Custom Form using json schema and UI schema*
+```jsx
+import React, { Component } from 'react';
+
+import { CustomForm } from 'dynamic-forms-react';
+
+class Example extends Component {
+  render () {
+    return (
+      <CustomForm
+        formUrl={this.paramUrl('id')}
+        onSubmit={(res) => (alert(res))}
+        onError={(error) => alert(error)}
+      />
+    )
+  }
+}
+```
+
+This is how you need to pass the json schema from your endpoint:
+```JSON
+{
+  "title": "Name Form",
+  "description": "A simple name form ",
+  "type": "object",
+  "required": [
+    "name",
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Name"
+    }
+  }
+}
+```
+
+This is how you need to pass the UI schema from your endpoint:
+
+```JSON
+{
+  "name": {
+    "ui:autofocus": true,
+    "ui:title": "First and Last Name",
+    "ui:emptyValue": ""
+  },
+}
+```
+
+
 
 ## License
 
