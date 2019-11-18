@@ -50,38 +50,46 @@ class Example extends Component {
 }
 ```
 
-This is how you need to pass the json schema from your endpoint:
+The URL should contain the next structure
 ```JSON
 {
-  "title": "Name Form",
-  "description": "A simple name form ",
-  "type": "object",
-  "required": [
-    "name",
-  ],
-  "additionalProperties": false,
-  "properties": {
-    "name": {
-      "type": "string",
-      "title": "Name"
-    }
+  "json_schema":{
+    ...
+  },
+  "ui_schema":{
+    ...
   }
 }
 ```
 
-This is how you need to pass the UI schema from your endpoint:
+Here is an example:
 
 ```JSON
 {
-  "name": {
-    "ui:autofocus": true,
-    "ui:title": "First and Last Name",
-    "ui:emptyValue": ""
+  "json_schema":{
+    "title": "Name Form",
+    "description": "A simple name form ",
+    "type": "object",
+    "required": [
+      "name",
+    ],
+    "additionalProperties": false,
+    "properties": {
+      "name": {
+        "type": "string",
+        "title": "Name"
+      }
+    }
   },
+  "ui_schema":{
+    "name": {
+      "ui:autofocus": true,
+      "ui:title": "First and Last Name",
+      "ui:emptyValue": ""
+    },
+  }
 }
 ```
-
-
 
 ## License
 
